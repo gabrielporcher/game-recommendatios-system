@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 
-import { generateRecommendations } from '@/recommendation/similarity'
+import { generateRecommendations } from '@/lib/recommendation/similarity'
 
 self.onmessage = async (event: MessageEvent) => {
   const { type, payload } = event.data

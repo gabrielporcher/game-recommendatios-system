@@ -12,9 +12,10 @@ export default function GameDetailsPage() {
   const router = useRouter()
   const { data: game, isLoading, error } = useGame(id as string)
   const { toggleLike, isGameLiked } = useLikes()
-  const liked = isGameLiked(id as string)
+  const liked = isGameLiked(game?.id as string)
+  console.log('is liked? ', liked)
 
-  console.log(game)
+  console.log('game: ', game)
 
   if (isLoading) {
     return (
